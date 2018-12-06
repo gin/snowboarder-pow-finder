@@ -1,0 +1,28 @@
+{
+  "name": "snowboarder-pow-finder",
+  "version": "0.0.1",
+  "description": "Deploy with: ```sh export AWS_ACCESS_KEY_ID=<YOUR_ID> export AWS_SECRET_ACCESS_KEY=<YOUR_KEY>",
+  "main": "handler.js",
+  "scripts": {
+    "test": "react-scripts test --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gin/snowboarder-pow-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gin/snowboarder-pow-finder/issues"
+  },
+  "homepage": "https://github.com/gin/snowboarder-pow-finder#readme",
+  "dependencies": {
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "react-scripts": "^2.1.1"
+  }
+}
