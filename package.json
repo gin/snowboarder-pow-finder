@@ -22,7 +22,14 @@
   "homepage": "https://github.com/gin/snowboarder-pow-finder#readme",
   "dependencies": {
     "react": "^16.7.0-alpha.2",
+    "react-cache": "^2.0.0-alpha.1",
     "react-dom": "^16.7.0-alpha.2",
     "react-scripts": "^2.1.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
