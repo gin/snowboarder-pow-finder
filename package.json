@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/gin/snowboarder-pow-finder#readme",
   "dependencies": {
+    "dark-sky-api": "^0.6.32",
     "react": "^16.7.0-alpha.2",
     "react-cache": "^2.0.0-alpha.1",
     "react-dom": "^16.7.0-alpha.2",
