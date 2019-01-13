@@ -108,6 +108,32 @@ function WeatherForecastList(props) {
   );
 }
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, info) {
+    console.error(error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback ? (
+        this.props.fallback
+      ) : (
+        <div>Something went wrong</div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 function App() {
   return (
@@ -127,13 +153,17 @@ function App() {
         ))}
       </ul>
       <h2>Weather</h2>
-      <React.Suspense fallback={<div>...loading</div>}>
-        <WeatherList />
-      </React.Suspense>
+      <ErrorBoundary>
+        <React.Suspense fallback={<div>...loading</div>}>
+          <WeatherList />
+        </React.Suspense>
+      </ErrorBoundary>
       <h2>Forecast</h2>
-       <React.Suspense fallback={<div>...loading</div>}>
-        <WeatherForecastList />
-      </React.Suspense>
+      <ErrorBoundary>
+        <React.Suspense fallback={<div>...loading</div>}>
+          <WeatherForecastList />
+        </React.Suspense>
+      </ErrorBoundary>
    </div>
   );
 }
