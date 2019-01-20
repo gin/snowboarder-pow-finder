@@ -3,16 +3,18 @@ import ReactDOM from "react-dom";
 import { unstable_createResource as createResource } from "react-cache";
 
 import DarkSkyApi from 'dark-sky-api';
-DarkSkyApi.apiKey = "";
+DarkSkyApi.apiKey = "774e206a6cb7067c82462fadb2571cc6";
 
 let resortData = [
   { name: "Snow Summit", zipcode: 92315, state: "CA", lat: "34.2380183", lon: "-116.8916176" },
   { name: "Mammoth", zipcode: 93546, state: "CA", lat: "37.6307674", lon: "-119.050186" },
+  { name: "June", zipcode: 93525, state: "CA", lat: "37.7679211", lon: "-119.092818" },
   { name: "Squaw Valley", zipcode: 96146, state: "CA", lat: "39.1969822", lon: "-120.2431602" },
   { name: "Alpine Meadows", zipcode: 96146, state: "CA", lat: "39.1644547", lon: "-120.2408818" },
   { name: "Jackson Hole", zipcode: 83025, state: "WY", lat: "43.5875453", lon: "-110.8301123" },
   { name: "Big Sky", zipcode: 59716, state: "MT", lat: "45.2882176", lon: "-111.4067207" },
   { name: "Snowbird", zipcode: 84092, state: "UT", lat: "40.5794328", lon: "-111.6585675" },
+  { name: "Aspen Snowmass", zipcode: 81615, state: "CO", lat: "39.1873108", lon: "-107.0172037" },
 ];
 
 let lat = resortData[0].lat;
@@ -119,6 +121,7 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, info) {
+    // TODO: Send error to service later (e.g. Bugsnag)
     console.error(error, info);
   }
 
