@@ -17,6 +17,8 @@ let resortData = [
   { name: "Aspen Snowmass", zipcode: 81615, state: "CO", lat: "39.1873108", lon: "-107.0172037", hasBlackout: true },
 ];
 
+const remainingBlackoutDates = { "2019-02-16", "2019-02-17" };
+
 let lat = resortData[0].lat;
 let lon = resortData[0].lon;
 let resortName = resortData[0].name;
