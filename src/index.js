@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { unstable_createResource as createResource } from "react-cache";
 
 import DarkSkyApi from 'dark-sky-api';
-DarkSkyApi.apiKey = "774e206a6cb7067c82462fadb2571cc6";
+DarkSkyApi.apiKey = process.env.API_DARKSKY;
 
 let resortData = [
   { name: "Snow Summit", zipcode: 92315, state: "CA", lat: "34.2380183", lon: "-116.8916176", hasBlackout: false },
@@ -17,7 +17,7 @@ let resortData = [
   { name: "Aspen Snowmass", zipcode: 81615, state: "CO", lat: "39.1873108", lon: "-107.0172037", hasBlackout: true },
 ];
 
-const remainingBlackoutDates = { "2019-02-16", "2019-02-17" };
+const remainingBlackoutDates = [ "2019-02-16", "2019-02-17" ];
 
 let lat = resortData[0].lat;
 let lon = resortData[0].lon;
